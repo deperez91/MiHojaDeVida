@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/mailtoui@1.0.1/dist/mailtoui-min.js" defer></script>
+
+  <link rel="stylesheet" type="text/css" href="css/acorstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Sanchez" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <title>Hoja de vida</title>
+  <style>
+    html {
+      background-color: #AAACB0;
+      padding: 0 1em;
+    }
+
+
+
+    *{
+  margin:0px;
+  padding:0px;
+  font-family: helvetica;
+}
+
+{
+  background-color: #404040;
+}
+
+div#body{
+  margin:40px auto;
+  width:500px;
+  min-height:50px;
+  background-color: red;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+div.subapartado{
+  width:600px;
+  min-height:50px;
+  background-color: red;
+  -webkit-transiton: height 0.2s;
+  
+}
+
+div.titulo{
+  width:600px;
+  height:50px;
+  background-color: #20603d;
+  overflow: hidden;
+  border-bottom: 1px solid #ffffff;
+}
+
+p.titulo{
+  margin:13px;
+  color: white;
+}
+
+div.info{
+  text-align: justify;
+  width:600px;
+  height:0px;
+  background-color: #E3E8F1;
+  overflow: hidden;
+  -webkit-transition: height 0.2s;
+}
+
+p.info{
+  margin:20px;
+  text-align: left;
+  color:#4f4f4f;
+  font-family: "Montserrat";
+}
+
+div.subapartado:hover div.info{
+
+  height:190px;
+  text-align: justify-all;
+}
+
+div.subapartado:hover div.info{
+
+  height:210px;
+  text-align: justify-all;
+}
+div.subapartado2:hover div.info{
+
+  
+  height:890px;
+  text-align: justify-all;
+}
+div.subapartado3:hover div.info{
+
+  height:290px;
+  text-align: justify-all;
+}
+div.subapartado4:hover div.info{
+
+  height:80px;
+  text-align: justify-all;
+}
+
+
+
+
+    body {
+      background-color: #ffffff;
+      margin: 1em auto;
+      max-width: 50em;
+    }
+    p, ul {
+      color: #ffffff;
+      font-family: 'Sanchez', serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    a
+    {
+      color: #000000;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    :root {
+      --yellowish: #eeb14f;
+      --dark-purple: #263547;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: var(--dark-purple);
+      height: 150px;
+    }
+    .logo {
+      background: url('./rss.png') no-repeat;
+      width: 32px;
+      height: 32px;
+      margin: 20px;
+    }
+    .title-holder {
+      align-items: center;
+    }
+    .nama {
+      color: #FCFCFC;
+      font-family: 'Montserrat', serif;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-weight: bold;
+      width: 420px;
+    }
+    .designare {
+      color: #FCFCFC;
+      font-family: 'Helvetica', serif;
+      font-size: 16px;
+      font-style: italic;
+    }
+    .content-body {
+      display: flex;
+      flex-direction: row;
+    }
+    .wrapper {
+      margin: 20px;
+    }
+    .section-left {
+      flex: 1;
+      background-color: var(--dark-purple);
+    }
+    .section-left ul { 
+      list-style: none;
+      margin-left: -1px;
+      text-transform: capitalize;
+      font-size: 12px;
+    }
+    h6 {
+      color: #96A296;
+    }
+    h2 {
+      color: var(--yellowish);
+      text-transform: uppercase;
+      font-size: 0.9em;
+      font-weight: bold;
+      font-family: 'Montserrat', serif;
+      letter-spacing: 2px;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: 0.7em;
+      font-family: 'Sanchez', serif;
+      font-weight: normal;
+      letter-spacing: 2px;
+    }
+    h4 {
+      font-family: 'Sanchez', serif;
+      font-weight: normal;
+      font-size: 0.8em;
+      margin-top: -10px;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+    
+
+    .section-right {
+      flex: 2;
+    }
+    .section-right .wrapper {
+      margin-left: 20px;
+    }
+    .section-right ul {
+      margin-left: -20px;
+    }
+    .section-right h2 {
+      color: var(--yellowish);
+      font-weight: bold;
+    }
+    .gpa {
+      margin-top: -15px;
+    }
+    .footer {
+      background-color: var(--dark-purple);
+    }
+    .ps {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo"></div>
+<img  src="unnamed.png" width="100" height="115">
+      <div class="title-holder">
+       
+          
+        <center>
+        <div class="nama">Diego Esteban Pérez</div>
+        <div class="designare">dperez_31@yahoo.com.ar</div>
+        </center>
+      </div>
+    </div> <!-- end header -->
+
+    <div class="content-body">
+      <div class="section-left">
+        <div class="wrapper">
+          <div class="lists">
+            <h2>habilidades profesionales</h2>
+            <br>
+            <ul>
+              <li>Mantenimiento de hardware tanto correctivo como preventivo 
+              en equipos portátiles y escritorio de computo.</li>
+              <br>
+              <li>Administración y gestión de contenidos web en Drupal</li>
+            </ul>
+          </div>
+          <br>
+          <div class="lists">
+            <h2>Habilidades personales</h2>
+            <br>
+            <ul>
+              <li>Espíritu creativo</li>
+              <li>Fiable y profesional</li>
+              <li>Organizado</li>
+              <li>Gestión del tiempo</li>
+              <li>Trabajo en equipo</li>
+              <li>Toma de decisiones</li>
+              <li>Proactividad</li>
+            </ul>
+          </div>
+          <br>
+          <div class="lists">
+            <h2>contacto</h2>
+            <br>
+            <h6>Cel.:</h6>
+            <i><p>3006865098 </p></i>
+            <br>
+            <h6>E-mail personal:</h6>
+            <i><p><a href="mailto:dperez_31@yahoo.com.ar">dperez_31@yahoo.com.ar</a></p></i>
+            <br>
+            <h6>E-mail institucional:</h6>
+            <i><p><a href="mailto:deperez@sanmateo.edu.do">deperez@sanmateo.edu.co</a></p></i>
+          </div>
+          <br>
+          <div class="lists">
+            <h2>social</h2>
+            <br>
+            <p>
+              <i class="fab fa-linkedin"></i>
+              <span><a href="https://www.linkedin.com/in/diego-perez-233068178/">www.linkedin.com</a></span><!-- facebook -->
+            </p>
+            <p>
+              <i class="fab fa-whatsapp"></i>
+              <span><a href="https://m.me/Diego">3006865098</a></span><!-- facebook -->
+            </p>
+            <p>
+              <i class="fab fa-twitter"></i>
+              <span><a href="https://twitter.com/dEsteban91">dEsteban91</a></span><!-- github -->
+            </p>
+          </div>
+
+
+        </div> <!-- end wrapper -->
+      </div> <!-- end section-left -->
+      <div class="section-right">
+        <div class="wrapper">
+          <div class="content">
+            <div id="body">
+            <div class="subapartado">
+      
+      <div class="titulo">
+        <p class="titulo">DATOS PERSONALES</p>
+      </div>
+
+      <div class="info">
+        <hr class="info">
+          <br>
+          <b>Nombres y apellidos:</b>  Diego Esteban Pérez Cante<br> 
+          <b>Cedula:</b>               1022969388<br> 
+          <b>Fecha de nacimiento:</b>  22 de Mayo de 1991<br>
+          <b>Ciudad natal:</b>         Bogotá D.C<br>
+          <b>Dirección:</b>            Cll 92 A sur 14-81<br>   
+          <b>Teléfono:</b>             7311739<br>
+          <b>Celular:</b>              3006865098<br> 
+          <b>e-mail institucional:</b> deperez@sanmateo.edu.co
+          
+        </p>
+            </div>
+          </div>
+            <div class="subapartado">
+      
+      <div class="titulo">
+        <p class="titulo">PERFIL PROFESIONAL</p>
+      </div>
+
+      <div class="info">
+        <hr class="info">
+        <br>
+            Tecnólogo profesional en Mantenimiento Electrónico e Instrumental <br>Industrial.
+            Actualmente curso estudios referente a la carrera de <br>Ingeniería de Sistemas.
+             Con experiencia laboral en el área de <br>mantenimiento de hardware e industrial 
+             realizando funciones como<br> el mantenimiento correctivo y preventivo de 
+             sistemas de cómputo<br> y electrónico, manejo de herramientas manuales eléctricas, 
+             <br>reparaciones de sistemas electrónicos y diligenciamiento de planillas<br> de 
+             control. Con capacidad de atención al detalle, seguimiento de<br> órdenes, 
+             trabajo en equipo, resolución de conflictos, fácil aprendizaje<br> y responsabilidad.<br>
+
+          </p>
+
+            </div>
+
+    </div>
+          
+
+          <div class="content">
+            <div class="subapartado2">
+      
+      <div class="titulo">
+        <p class="titulo">EXPERIENCIA LABORAL </p>
+      </div>
+
+      <div class="info">
+        <hr class="info">
+            
+            <hr>
+            <br> 
+            <b>Empresa:</b>             Caracol Televisión<br> 
+            <b>Fecha:</b>                01 de Octubre de 2012 – 17 de Abril de 2013<br> 
+            <b>Dirección:</b>           Cl. 103 #69b-43, Bogotá<br> 
+            <b>Teléfono:</b>            6430430<br> 
+            <b>Jefe:</b>                Edgar Gomez<br> 
+            <b>Funciones:</b>           Ayudante Laboratorio de luces  Mantenimiento<br>preventivo y correctivo de proyectores y reguladores de voltaje </h5><br> 
+            <b>Cargo:</b>               Practicante<br> 
+            <br> 
+            <hr>
+            <br> 
+            <b>Empresa:</b>             High Tech Solutions<br> 
+            <b>Fecha:</b>               13/04/2015 - 13/05/2015 y 01/09/2015 - 15/10/2015<br> 
+            <b>Dirección:</b>           Carrera 54B No.174-20 Bogotá<br> 
+            <b>Teléfono:</b>            6032999<br> 
+            <b>Jefe:</b>                Katherin Andrade<br> 
+            <b>Funciones:</b>           Mantenimiento preventivo de Computadores, periféricos,<br> portátiles e impresoras<br> 
+            <b>Cargo:</b>               Auxiliar Mantenimiento preventivo de Computadores,<br> portátiles e impresoras
+            <br> 
+            <br> 
+            <hr>
+            <br> 
+            <b>Empresa:</b>             Fundación Universitaria San Mateo<br>  
+            <b>Fecha:</b>               21/11/2018 - 21/01/2019<br> 
+            <b>Dirección:</b>           Transversal 17 Nº 25 - 25<br>  
+            <b>Teléfono:</b>            3309999<br> 
+            <b>Jefe inmediato:</b>      Liceth Vargas<br> 
+            <b>Jefe superior:</b>       Jonathan Barrero<br> 
+            <b>Funciones:</b>           Servicio y atención al usuario, monitoreo de salas,<br> mantenimiento preventivo y correctivo de   equipos de computo y sus<br> periféricos, soporte y apoyo<br>  
+            <b>Cargo:</b>                   Practicante<br>
+            <br> 
+            <hr>
+            <br> 
+            <b>Empresa:</b>             Banco de Alimentos Bogotá<br> 
+            <b>Fecha:</b>               20 de marzo de 2019<br> 
+            <b>Dirección:</b>           Calle 19 A # 32 – 50<br>  
+            <b>Teléfono:</b>            244 0249<br>  
+            <b>Jefe inmediato:</b>      Fernando Burbano<br> 
+            <b>Funciones:</b>           Armado de mercado, verificación de producto, selección<br> y empaque de producto, recepción de producto <br>
+            <b>Cargo:</b>               Voluntariado<br>
+            <br><br>
+            <a> Actualmente me encuentro estudiando en la jornada nocturna y<br> trabajo de forma independiente realizando mantenimiento<br> preventivo y correctivo  de equipos computo domestico y en mis<br> días libres realizo voluntariado en un banco de alimentos.</a>
+</div>
+</div>
+          <div class="subapartado3">
+      
+      <div class="titulo">
+        <p class="titulo">FORMACIÓN ACADÉMICA</p>
+
+      </div>
+
+      <div class="info">
+        <p class="info"><a><h3>Carrera tecnológica</h3></a></p><br>
+          <hr>
+          <b>Especialidad:</b>            Tecnólogo Mantenimiento Electrónico Instrumental<br> e Industrial<br>
+          <b>Fecha:</b>                   01 de Julio de 2011 – 15 de abril de 2012<br>
+          <b>Instituto:</b>               Centro de Electricidad Electrónica y Telecomunicaciones<br>
+          <b>Dirección:</b>               Av. Cra 30 No. 17b-25 Sur.
+          <br><br>
+        <p><a><h3>Carrera Universitaria</h3></a></p><br>
+        <hr>
+          <b>Especialidad:</b>             Ingeniería de Sistemas<br>
+          <b>Fecha:</b>                    08 de agosto de 2016<br> 
+          <b>Universidad:</b>              Fundación Universitaria San Mateo<br>
+          <b>Dirección:</b>                Transversal 17 No 25 - 25 Bogotá<br>
+</div>
+</div>
+
+          <div class="subapartado4">
+      
+      <div class="titulo">
+        <p class="titulo">COMPETENCIAS Y HABILIDADES</p>
+      </div>
+
+      <div class="info">
+        <hr class="info">
+        <br>
+        Mantenimiento de Hardware tanto correctivo y preventivo en equipos<br> portátiles y escritorio de cómputo.</p>
+</div>
+</div>
+           <div class="subapartado">
+      
+      <div class="titulo">
+        <p class="titulo">REFERENCIAS</p>
+      </div>
+
+      <div class="info">
+        <hr class="info"><br>Nombre: Katherin Andrade <br> Empresa: High Tech Solutions <br>Dirección: Carrera 54B No.174-20 Bogotá <br> Teléfono: 6032999 
+        <br><br>
+        Nombre: Liceth Vargas <br>Empresa: Fundación Universitaria San Mateo <br> Dirección: Transversal 17 No 25 - 25 Bogotá <br>Teléfono: 3309999<br>
+      </p>    
+
+</div>
+
+        </div>
+      </div> <!-- end section right -->
+    </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+    <div class="footer">
+    </div>
+  </div>
+</body>
+</html>
